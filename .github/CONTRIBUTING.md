@@ -182,6 +182,16 @@ Anything you want to address? Is this PR's logic dependent on another feature? I
 - Preferably, the other person should be the one merging the PR
 - Squash and merge whenever possible. This keeps our main branch clean and traceable
 
+Keep in mind that while squashing and merging is definitely preferable for keeping the main branch clean, it shows as one singular commit to main. The branch you are merging from will still show each individual commit, unsquashed. This means GitHub will recognize that branch as being ahead of main by `x` amount of commits, and behind by `y` squashed commit(s). 
+
+We have a few options to remedy this:
+
+- Ignore it, and keep the branch for future work. 
+  - This is ugly, but it "works".
+  - There is still a fairly big issue with this, though. Eventually, that branch will be working on an "outdated" version of the project. Future PRs could then result in merge conflicts.
+- Delete branches after they have been merged.
+  - This is preferable. In fact, we can even configure this to occur automatically on GitHub. If you had more work you intended to do on that branch, that's fine. Once the PR has been merged, you can just create a new branch, perhaps even with the same name, and it'll be up-to-date with the new change(s) you just added. 
+
 ### Issue Reporting
 
 #### Bug Reporting
